@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>form validate</title>
+	<link rel="stylesheet" type="text/css" href="./form.css">
+	<script
+	  src="http://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+  </script>
+  <script src="jquery.validate.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Form</h1>
+	</header>
+	<form class="importantForm" id="commentForm" method="get" action="#">
+  	<fieldset>
+	    <legend>Please provide your name, email address, phone number, and a comment</legend>
+	    <div>
+	      <label for="name">Name (required, at least 2 characters)</label>
+	      <input id="name" name="name" minlength="2" type="text" required>
+	    </div>
+	    <div>
+	      <label for="email">E-Mail (required)</label>
+	      <input id="email" type="email" name="email" required>
+	    </div>
+	    <div>
+	      <label for="phone">Phone (required)</label>
+	      <input id="phone" type="tel" name="phone" required>
+	    </div>
+	    <div>
+	      <label for="url">URL (optional)</label>
+	      <input id="url" type="url" name="url">
+	    </div>
+	    <div>
+	      <label for="comment">Your comment (required)</label>
+	      <textarea id="comment" name="comment" required></textarea>
+	    </div>
+	    <div>
+	      <input class="submit" type="submit" value="Submit">
+	    </div>
+  	</fieldset>
+	</form>
+	<script>$("#commentForm").validate();</script>
+
+</body>
+</html>
